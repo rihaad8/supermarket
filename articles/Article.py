@@ -1,15 +1,19 @@
 class Article(object):
     """docstring for Article."""
-    id = 1
-    name = "Monster Energy"
-    price = 28.7
 
-    def __init__(self, arg):
+    name = " "
+    price = -1
+    id = -1
+    #Constructor
+    def __init__(self, id, name, price):
         super(Article, self).__init__()
-        self.arg = arg
+        self.id = id
+        self.name = name
+        self.price = price
+
     #Getter
     def indentify(self):
-        id_string = str(self.id) + " " + str(self.name) + " " + str(self.price) + " " + str(self.arg)
+        id_string = str(self.id) + " " + str(self.name) + " " + str(self.price)
         return id_string
 
     def get_id(self):
@@ -24,5 +28,16 @@ class Article(object):
     def get_args(self):
         return self.args
     #Setter
-    def set_id(self, i):
-        self.id = i
+    def set_id(self, intVal):
+        self.id = intVal
+
+    def set_name(self, strVal):
+        self.name = strVal
+
+    def set_price(self, doubleVal):
+        self.price = doubleVal
+
+    #other Methods
+    def toList(self):
+        attrList = [self.id, self.name, self.price]
+        return attrList

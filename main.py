@@ -1,4 +1,7 @@
 from articles import Article
-monsterEnergy = Article.Article("Something")
-print(monsterEnergy.indentify())
-print(monsterEnergy.get_id())
+from articles import Inventory
+
+superMarketInventory = Inventory.Inventory()
+superMarketInventory.loadListFromFile("Inventory.csv")
+superMarketInventory.addArticle(Article.Article(12, "AbraKadabra", 99.99))
+superMarketInventory.saveListToFile("Inventory.csv")
