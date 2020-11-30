@@ -19,6 +19,9 @@ class Inventory(object):
         else:
             print("ID [",Article.get_id(),"] is already taken! Please try to add another Article.")
 
+    def sortInventory(self):
+
+
     def saveListToFile(self, fileName):
         with open(fileName, 'w', newline='') as inventoryFile:
             writer = csv.writer(inventoryFile)
